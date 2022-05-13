@@ -1,0 +1,25 @@
+{% load static %}
+<body bgcolor='RoyalBlue'>
+	<h1>
+		Question: {{Question}}
+		<h4>
+			q_id : {{q_id}}<br>
+			Actual answer: {{answer}}<br>
+			Dificulty level: {{dificulty_level}}<br>
+			score : {{score}} <br>
+			quiestion_number : {{quiestion_number}}<br>
+			correct_answers_qty : {{correct_answers_qty}}<br>
+		</h4>
+		<br><br>
+		<form action="/questions/next_quest" method="post">
+			{% csrf_token %}
+			<input type="hidden" id="custId" name="custId" value={{ q_id }}>
+			{% for i in L %}
+				<input type="radio" id={{ i }} name="selected_option" value="{{i}}">
+				<label for="html">{{ i }}</label><br>
+			{% endfor %}
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+	<h1>
+</body>

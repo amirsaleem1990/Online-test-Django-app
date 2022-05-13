@@ -1,0 +1,22 @@
+interview ki setting kesy ho gi? shayad esy:
+	1- user jab interview k lye free ho ga tab HR
+		1- user DB me create kary ga.
+		2- time duration set kary ga.
+	user ko at max 5 mint me us ki email par name and password mil jay ga.
+	2- user login kary ga, or us ka time start ho jay ga.
+	3- logout hony par MCQ ki poori detail or user ka score wagera DB me save ho jay ga, or HR ko email chali jay gi.
+
+kuch cheezo ko mazboot karna h:
+	khatra_1 : 
+		agar user creditials ksi sy share kar dy or wo us ki jaga MCQ dy dy to???
+	possible solution:
+		login hoty hi laptop k camera sy user ki picture leni chahye. 
+
+
+
+Problems to be solved:
+	# 1- sab sy pehla jo answer select hota h wo mery pas 'on' aata h.
+	# 2- is_completed_all_question ki value hamesha 1 h. is ko sahi karna h.
+	# 3- score sahi nahi aa raha, masla ye ho raha h k wo thora jaldi chal raha h, pehly question k barabar me pehly question submit hony k bad ka score hona chahye, jab k abhi pehly question me pehly question sy pehly ka score h, (which is 0), or last question me second last submit k bad ka score h, to last question ka score kahin record nahi ho raha.
+	# 4- interview_info table me 1 column add karna h <Interview ending reason [time_out, user_logged_out, internet_disconnection, completed, questions_ended]>.
+	
